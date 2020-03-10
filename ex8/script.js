@@ -24,7 +24,11 @@ function modifyItem () {
     for (let i = 0; i < allListItems.length; i++) {
 
         allListItems[i].addEventListener('click', function(){
-            this.style.textDecoration =  "line-through";
+            if (this.style.textDecoration === "line-through") {
+                this.style.textDecoration = "none";
+            } else {
+                this.style.textDecoration = "line-through";
+            }
         })
 
         var bttn = document.createElement("button");
