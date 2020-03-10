@@ -6,10 +6,11 @@
 
 #accordion {
     width: 400px;
-    background-color: yellow;
     margin: auto;
+    transition: background-color 1s ease-out;
 }
 
 #section {
-    padding: 5px;
+    overflow: hidden;
+    transition: max-height .7s ease-out;
 }

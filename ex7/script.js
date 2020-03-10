@@ -5,7 +5,25 @@
 var sectionHeader = document.getElementById('section-header');
 
 sectionHeader.addEventListener('click', function(){
-    count = count + 1;
-    counter.innerHTML = count;
+
+     var section = document.getElementById('section');
+     var accordion = document.getElementById('accordion');
+
+    //   if (section.style.display === "block") {
+    //       section.style.display = "none";
+    //     } else {
+    //       section.style.display = "block";
+    //     }
     
+    if (section.style.maxHeight === "132px") {
+        section.style.maxHeight = "0px";
+        section.style.padding = "0px";
+        accordion.style.backgroundColor = "white";
+    } else {
+        section.style.maxHeight = "132px";
+        section.style.padding = "5px";
+        accordion.style.backgroundColor = "yellow";
+    }
+
+
 });
